@@ -1,0 +1,20 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+.create-new {
+  margin: 0 auto;
+  text-align: center;
+
+  .noteInput {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .noteInput-label {
+    display: block;
+  }
+
+}

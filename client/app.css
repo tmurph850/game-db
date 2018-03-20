@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+.create-new {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.create-new .noteInput {
+  margin: 0 auto;
+  display: block;
+}
+
+.create-new .noteInput-label {
+  display: block;
+}
