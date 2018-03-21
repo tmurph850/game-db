@@ -12,7 +12,7 @@ const createNew = (gameTitle, gameRating) => {
     data: {
       game: {
         gameTitle: gameTitle,
-        gameRating: gameRating
+        gameRating: [gameRating]
       }
     }
   });
