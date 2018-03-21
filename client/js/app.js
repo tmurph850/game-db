@@ -1,32 +1,33 @@
 import axios from 'axios';
 import '../app.min.css';
 
-let theTarget = document.getElementsByClassName("noteButton");
-let theInput = document.getElementsByClassName("noteInput");
-let theTextArea = document.getElementById("note-body");
+let theTarget = document.getElementsByClassName("add-game");
+let theInput = document.getElementsByClassName("game-title");
 
-const createNew = (noteTitle, noteBody) => {
-  const notePost = axios({
+const createNew = (gameTitle, gameRating) => {
+  const postGame = axios({
     method: "post",
     url: `http://localhost:3000/create`,
     responseType: "json",
     data: {
-      noteTitle: noteTitle,
-      noteBody: noteBody
+      game: {
+        gameTitle: gameTitle,
+        gameRating: gameRating
+      }
     }
   });
 
-  notePost.then((response) => {
+  postGame.then((response) => {
     console.log(response);
   })
 };
 
 const handleClick = () => {
   let titleVal = theInput[0].value;
-  let bodyVal = theTextArea.value;
+  let ratingVal = theInput[1].value;
 
-  console.log(titleVal, bodyVal);
-  createNew(titleVal, bodyVal);
+  console.log(titleVal, ratingVal);
+  createNew(titleVal, ratingVal);
 };
 
 theTarget[0].addEventListener('click', handleClick);
